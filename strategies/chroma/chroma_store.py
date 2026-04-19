@@ -3,7 +3,7 @@
 from pathlib import Path
 from typing import Any
 
-from magic_vectorstore.core import BaseVectorStore, QueryResult, VectorEntry, VectorStoreStats, VectorStoreType
+from axiom_vectorstore.core import BaseVectorStore, QueryResult, VectorEntry, VectorStoreStats, VectorStoreType
 
 try:
     import chromadb

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Entry point for magic-vectorstore.
+"""Entry point for axiom-vectorstore.
 
 Usage:
     python -m magic_vectorstore.run --input <path> --strategy <strategy> --action <action> [options]
@@ -10,8 +10,8 @@ import json
 import sys
 from pathlib import Path
 
-from magic_vectorstore.core import VectorEntry
-from magic_vectorstore.strategies import ChromaVectorStore, FAISSVectorStore
+from axiom_vectorstore.core import VectorEntry
+from axiom_vectorstore.strategies import ChromaVectorStore, FAISSVectorStore
 
 STORE_MAP = {
     "chroma": ChromaVectorStore,
@@ -38,7 +38,7 @@ def load_entries(path: Path) -> list[VectorEntry]:
 
 
 def main():
-    parser = argparse.ArgumentParser(description="magic-vectorstore: Vector storage tool")
+    parser = argparse.ArgumentParser(description="axiom-vectorstore: Vector storage tool")
     parser.add_argument("--input", "-i", type=Path, help="Input JSON file with entries")
     parser.add_argument("--output", "-o", type=Path, help="Output JSON file for results")
     parser.add_argument(

@@ -18,7 +18,7 @@ pip install chromadb faiss-cpu  # 或 faiss-gpu
 ## 快速开始
 
 ```python
-from magic_vectorstore import ChromaVectorStore, VectorEntry
+from axiom_vectorstore import ChromaVectorStore, VectorEntry
 
 store = ChromaVectorStore(collection_name="my_collection")
 store.add([

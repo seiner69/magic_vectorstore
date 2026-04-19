@@ -1,10 +1,10 @@
-"""magic-vectorstore: A modular vector storage and similarity search library.
+"""axiom-vectorstore: A modular vector storage and similarity search library.
 
 Provides vector storage strategies for RAG applications.
 
 Example:
-    >>> from magic_vectorstore.core import VectorEntry
-    >>> from magic_vectorstore.strategies import ChromaVectorStore
+    >>> from axiom_vectorstore.core import VectorEntry
+    >>> from axiom_vectorstore.strategies import ChromaVectorStore
     >>>
     >>> store = ChromaVectorStore(collection_name="my_collection")
     >>> entries = [VectorEntry(id="1", embedding=[0.1, 0.2], text="Hello world")]
@@ -13,15 +13,15 @@ Example:
     >>> print(f"Found {len(result.entries)} results")
 """
 
-from magic_vectorstore.core import (
+from axiom_vectorstore.core import (
     BaseVectorStore,
     QueryResult,
     VectorEntry,
     VectorStoreStats,
     VectorStoreType,
 )
-from magic_vectorstore.core.inmemory_store import InMemoryStore
-from magic_vectorstore.strategies import ChromaVectorStore, FAISSVectorStore
+from axiom_vectorstore.core.inmemory_store import InMemoryStore
+from axiom_vectorstore.strategies import ChromaVectorStore, FAISSVectorStore
 
 __all__ = [
     # Core
